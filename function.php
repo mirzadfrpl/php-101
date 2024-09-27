@@ -1,23 +1,27 @@
 <?php
 
+// basic function
 function sayHello()
 {
     echo "Hello";
     echo " World\n";
 }
 
+// paramter
 function sayName($nama)
 {
     echo "my name is {$nama}\n";
 }
 
+// Default parameter
 function sayNameAndAge($nama, $umur = 10)
 {
     echo "my name is {$nama}\n";
     echo "and my age is {$umur}";
 }
 
-function perhitungan(...$angka) // rest parameter
+// rest parameter
+function perhitungan(...$angka)
 {
     $result = 0;
     foreach ($angka as $nilai) {
@@ -27,4 +31,10 @@ function perhitungan(...$angka) // rest parameter
     echo $result;
 }
 
-perhitungan(4, 5, 6, 7, 8);
+// Data type parameter
+function sum(int $a,  int $b)
+{
+    var_dump($a, $b);
+    $result = $a + $b;
+    echo $result;
+}
